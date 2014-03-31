@@ -30,10 +30,18 @@
         return elements.each(function() {
             $el = $(this);
 
+            /*
+                alter height and min-height so we can get an accurate measure of the
+                elements height
+            */
             $el
                 .height('auto')
                 .css('min-height', 0);
 
+            /*
+                top position is used to determine if the element is on the current
+                row or a new one
+            */
             topPostion = $el.position().top;
 
             if (currentRowStart != topPostion) {
@@ -43,11 +51,11 @@
 
                 rowDivs.length = 0; // empty the array
                 currentRowStart = topPostion;
-                currentTallest = $el.height();
+                currentTallest = $el.outerHeight();
                 rowDivs.push($el);
             } else {
                 rowDivs.push($el);
-                currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+                currentTallest = (currentTallest < $el.outerHeight()) ? ($el.outerHeight()) : (currentTallest);
             }
 
             for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
