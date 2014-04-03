@@ -1,4 +1,6 @@
 /*
+    https://github.com/codekipple/conformity
+
     Plugin adapted from this code:- http://codepen.io/micahgodbolt/details/FgqLc
 
     pass conformity a jquery collection of blocks inside a container, conformity will make sure each row is
@@ -19,13 +21,20 @@
         factory(jQuery);
     }
 }(function ($) {
-    $.fn.conformity = function () {
-        var elements = $(this),
+    $.fn.conformity = function (options) {
+        var settings = {
+                'mode': 'min-height'
+            },
+            elements = $(this),
             currentTallest = 0,
             currentRowStart = 0,
             rowDivs = new Array(),
             $el,
             topPosition = 0;
+
+        if (options) {
+            $.extend(settings, options);
+        }
 
         return elements.each(function() {
             $el = $(this);
@@ -34,9 +43,13 @@
                 alter height and min-height so we can get an accurate measure of the
                 elements height
             */
-            $el
-                .height('auto')
-                .css('min-height', 0);
+            if (settings.mode === 'min-height') {
+                $el
+                    .height('auto')
+                    .css('min-height', 0);
+            } else if (settings.mode === 'height')  {
+                $el.height('auto');
+            }
 
             /*
                 top position is used to determine if the element is on the current
@@ -46,7 +59,7 @@
 
             if (currentRowStart != topPostion) {
                 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-                    rowDivs[currentDiv].css('min-height', currentTallest);
+                    rowDivs[currentDiv].css(settings.mode, currentTallest);
                 }
 
                 rowDivs.length = 0; // empty the array
@@ -59,7 +72,7 @@
             }
 
             for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-                rowDivs[currentDiv].css('min-height', currentTallest);
+                rowDivs[currentDiv].css(settings.mode, currentTallest);
             }
         });
     };
