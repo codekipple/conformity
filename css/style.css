@@ -36,7 +36,7 @@ li {
 h1 {
     margin: 0 0 .5em 0;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #F2E8B6;
     font-family: 'Droid Sans Mono', sans-serif;
 }
@@ -70,7 +70,7 @@ h2 {
     structural
 */
 .container {
-    padding: 0 2em;
+    padding: 0 1em;
     margin: 0 auto;
     max-width: 1100px;
 }
@@ -133,6 +133,10 @@ footer {
     responsive changes
 */
 @media screen and (min-width: 480px) {
+    .container {
+        padding: 0 2em;
+    }
+
     h1 { font-size: 3em; }
 }
 
