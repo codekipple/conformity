@@ -1,0 +1,16 @@
+{
+  "name": "conformity",
+  "description": "jQuery plugin for equal height elements based on row rather than set.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codekipple/conformity"
+  },
+  "readme": "jQuery plugin for equal height elements based on row rather than set.",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "load-grunt-config": "~0.9.1",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-copy": "~0.5.0"
+  }
+}
