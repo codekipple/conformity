@@ -26,7 +26,7 @@
             elements = $(this),
             currentTallest = 0,
             currentRowStart = 0,
-            rowDivs = new Array(),
+            rowDivs = [],
             $el,
             topPosition = 0;
 
@@ -50,18 +50,18 @@
             }
 
             /*
-                top position is used to determine if the element is on the current
+                top offset is used to determine if the element is on the current
                 row or a new one
             */
-            topPostion = $el.position().top;
+            topPosition = $el.offset().top;
 
-            if (currentRowStart != topPostion) {
+            if (currentRowStart != topPosition) {
                 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
                     rowDivs[currentDiv].css(settings.mode, currentTallest);
                 }
 
                 rowDivs.length = 0; // empty the array
-                currentRowStart = topPostion;
+                currentRowStart = topPosition;
                 currentTallest = $el.outerHeight();
                 rowDivs.push($el);
             } else {
