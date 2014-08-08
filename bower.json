@@ -12,7 +12,8 @@
     "node_modules/",
     "grunt",
     ".gitignore",
-    "confomity.js",
+    "bower.json",
+    "conformity.js",
     "Gruntfile.js",
     "package.json"
   ]
