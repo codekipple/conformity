@@ -1,4 +1,4 @@
-/*! v0.2.2 https://github.com/codekipple/conformity. Plugin adapted from this code:- http://codepen.io/micahgodbolt/details/FgqLc */
+/*! v0.2.3 https://github.com/codekipple/conformity. Plugin adapted from this code:- http://codepen.io/micahgodbolt/details/FgqLc */
 
 /*
     pass conformity a jquery collection of blocks inside a container, conformity will make sure each row is
