@@ -13,7 +13,7 @@
     "grunt",
     ".gitignore",
     "bower.json",
-    "conformity.js",
+    "/conformity.js",
     "Gruntfile.js",
     "package.json"
   ]
