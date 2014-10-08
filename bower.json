@@ -15,6 +15,7 @@
     "bower.json",
     "/conformity.js",
     "Gruntfile.js",
-    "package.json"
+    "package.json",
+    "CHANGELOG.md"
   ]
 }
