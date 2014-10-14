@@ -26,3 +26,8 @@ Acknowledgments
 ---------------
 
 Conformity.js is based on the work of [Micah Godbolt](http://codepen.io/micahgodbolt/details/FgqLc), [Chris Coyier](http://css-tricks.com/equal-height-blocks-in-rows/) and [Stephen Akins](http://stephenakins.blogspot.co.uk/2011/01/uniform-div-heights-for-liquid-css-p.html).
+
+License
+-------
+
+Licensed under the MIT license.

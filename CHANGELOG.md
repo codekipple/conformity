@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+### Changed
+- Added license to readme
+
 ## 0.2.3 - 2014-05-08
 ### Changed
 - Fixed issue with bower ignore file list ignoring conformity js file inside the dist folder.
